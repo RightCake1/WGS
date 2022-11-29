@@ -1,13 +1,13 @@
-**bold text**Annotations 
+**Annotations**
 
 
-*italicized text*RAST 
+*RAST*
 
 
-[Source Page](https://rast.nmpdr.org/rast.cgi?page=Upload
+[Source Page](https://rast.nmpdr.org/rast.cgi?page=Upload)
 
 
-[Tutorial](https://www.theseed.org/wiki/SEED_Viewer_Tutorial
+[Tutorial](https://www.theseed.org/wiki/SEED_Viewer_Tutorial)
 
 
 After running RAST, check seed viewer and go for analysis
@@ -16,7 +16,7 @@ After running RAST, check seed viewer and go for analysis
 ALTERNATIVE TO RAST 
 
 
-*italicized text*Prokka  
+*Prokka*
 
 [Source Page](https://github.com/tseemann/prokka)
 
@@ -32,7 +32,7 @@ Code -
 
 Code – 
 
-conda activate prokka`
+`conda activate prokka`
 
 3. Then Code -
 
