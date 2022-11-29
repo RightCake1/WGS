@@ -32,7 +32,7 @@ Code -
 
 8.	Run spades 
 
-[Source Page](http://sepsis-omics.github.io/tutorials/modules/spades_cmdline/)
+[Tutorial](http://sepsis-omics.github.io/tutorials/modules/spades_cmdline/)
 
 [Source Page](https://github.com/ablab/spades) 
 
