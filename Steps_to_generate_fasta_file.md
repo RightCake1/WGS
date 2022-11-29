@@ -24,3 +24,4 @@ only paired used since unpaired can’t be used in assembly
     10. Best matched file check and cut upto length 500 according to organism 
 hypo protein, no significance, coding not
 file name – contigs.fasta
+
