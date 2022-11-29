@@ -1,16 +1,16 @@
 **Identification**
 
-1. First use pubmlst 
+1. First use *pubmlst* 
 
 [Source Page](https://pubmlst.org/)
 
 Go to Species ID and upload the fasta file
 
-2. Use k-mer finder 
+2. Use *k-mer finder*
 
 [Source Page](https://cge.cbs.dtu.dk/services/KmerFinder/)
 
-3. Uss fastANI –  
+3. Uss *fastANI* –  
 
 Firstly download refseq first, rename it then run code
 
@@ -20,7 +20,7 @@ Code -
 
 **NOTE** Needs to be 95% or higher for match
 
-4. Find 16s-rna sequence using using barnap 
+4. Find 16s-rna sequence using *Barnap* 
 
 [Source Page](https://github.com/tseemann/barrnap)
 
@@ -32,7 +32,7 @@ Code  -
 
 *Alternative to barnap - Online based barnap*
 
-Contest16s
+*Contest16s*
 
 [Source Page](https://www.ezbiocloud.net/tools/contest16s)
 

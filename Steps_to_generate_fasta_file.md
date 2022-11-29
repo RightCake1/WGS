@@ -10,15 +10,17 @@ Steps to generate Fasta File
  
 Code –
  
-cat file_names > new file name
+`cat file_names > new file_name`
 
 5.	Run fastqc on them
+
+[Source Page](https://github.com/s-andrews/FastQC)
  
 Code -
 
 `fastqc name`
 
-6.	Trimmomatic run  
+6.	Run and trim the sequence using Trimmomatic   
 
 [Source Page](http://www.usadellab.org/cms/?page=trimmomatic)
 
@@ -30,7 +32,7 @@ Code -
 
 `fastqc *.fastq`
 
-8.	Run spades 
+8.	Run spades for assembly and creating fasta file
 
 [Tutorial](http://sepsis-omics.github.io/tutorials/modules/spades_cmdline/)
 
