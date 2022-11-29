@@ -6,11 +6,11 @@
 
 Go to Species ID and upload the fasta file
 
-2. Use kmer finder 
+2. Use k-mer finder 
 
 [Source Page](https://cge.cbs.dtu.dk/services/KmerFinder/)
 
-3. Uss fastAfNI –  
+3. Uss fastANI –  
 
 Firstly download refseq first, rename it then run code
 
@@ -20,7 +20,7 @@ Code -
 
 **NOTE** Needs to be 95% or higher for match
 
-4. Find 16s rna sequence using using barnap 
+4. Find 16s-rna sequence using using barnap 
 
 [Source Page](https://github.com/tseemann/barrnap)
 
@@ -31,6 +31,8 @@ Code  -
 `barrnap -o rrna.fa Your_file.fasta rrna.gff`
 
 *Alternative to barnap - Online based barnap*
+
+Contest16s
 
 [Source Page](https://www.ezbiocloud.net/tools/contest16s)
 
