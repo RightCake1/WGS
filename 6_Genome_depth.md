@@ -6,7 +6,7 @@
 
 [About](https://www.metagenomics.wiki/tools/bowtie2) 
 
-Samtools
+*Samtools*
 
 [About and Usage](http://www.htslib.org/doc/samtools-coverage.html)
  
@@ -24,29 +24,34 @@ Samtools
 
 Code -
 
-`bwa index M00371-002.fasta`  
+`bwa index Your_file.fasta`  
 
 3. Make sam file
 
 Code -
 
-`bwa mem -t 12 M00371-002.fasta R1p.fastq R2p.fastq > 371.sam
-Convert - samtools view -S -b 371.sam > 371.bam`
+`bwa mem -t 12 Your_file.fasta R1p.fastq R2p.fastq > Your_file.sam
 
-4. Sort alignment 
+4. Convert - 
 
 Code - 
 
-`samtools sort 371.bam --reference M00371-002.fasta > 371sort.bam`
+`samtools view -S -b Your_file.sam > Your_file.bam`
+
+5. Sort alignment 
+
+Code - 
+
+`samtools sort Your_file.bam --reference Your_file.fasta > Your_file_sort.bam`
 
 5. Check mean read depth 
 
 Code -
 
-`samtools depth -a 371sort.bam | awk '{c++;s+=$3}END{print s/c}'`
+`samtools depth -a Your_file_sort.bam | awk '{c++;s+=$3}END{print s/c}'`
 
 6. Breadth of coverage 
 
 Code - 
 
-`samtools depth -a file.bam | awk '{c++; if($3>0) total+=1}END{print (total/c)*100}'`
+`samtools depth -a Your_file.bam | awk '{c++; if($3>0) total+=1}END{print (total/c)*100}'`

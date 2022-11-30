@@ -27,7 +27,7 @@ Code-
 `abricate Your_file.fasta`  - for single file
 
 
-*Virulence* 
+**Virulence**
 
 1. BIGSdb-Pasteur
 
@@ -46,7 +46,7 @@ Code-
 [Accesible to all](http://www.mgc.ac.cn/VFs/main.htm)
 
 
-*Insertion sequence finder*
+**Insertion sequence finder**
 
 1. *MGE*
 

@@ -30,9 +30,7 @@ Code -
 
 Code - 
 
-`docker run -it -v /home/mustafa/M01094-002.fasta:/srv/jgi-ml/classifier/dl/in.fasta -v`
-
-`/home/mustafa/DeeplasmidResults:/srv/jgi-ml/classifier/dl/outdir billandreo/deeplasmid feature_DL_plasmid_predict.sh in.fasta outdir` 
+`docker run -it -v /home/mustafa/Your_file.fasta:/srv/jgi-ml/classifier/dl/in.fasta -v /home/mustafa/DeeplasmidResults:/srv/jgi-ml/classifier/dl/outdir billandreo/deeplasmid feature_DL_plasmid_predict.sh in.fasta outdir` 
 
 Results example - 47 NODE_16_length_67951_cov_53.067574 decision=MAIN, avr score: 0.000 +/- 0.000  len=68.0k samples=180
 Counts: Plasm=4  Ambig=0  Main=43  nCount=47
@@ -53,4 +51,4 @@ Code -
 
 3. Code for platon 
 
-`platon --db db --output PlatonResults M00371-002.fasta`
+`platon --db db --output PlatonResults Your_file.fasta`
