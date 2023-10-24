@@ -32,4 +32,8 @@ Make table for resistance to merge data
 [Source Page](https://www.clinicalmicrobiologyandinfection.com/article/S1198-743X(14)61632-3/fulltext) Check this Article for details.
 
 
+4. Use *Kleborate*
 
+[Source Page and Details]https://github.com/klebgenomics/Kleborate
+
+I havent used Kleborate yet but this is the go to for Klebsiella spp. 
