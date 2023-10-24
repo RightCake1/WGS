@@ -56,3 +56,8 @@ Code -
 `spades.py -1 R1p.fastq -2 R2p.fastq --careful --cov-cutoff auto -o spades_assembly_all_illumina`
 
 
+*BONUS*
+
+You can use SnakeMake (This for abit of advanced users)
+
+[Source Page](https://github.com/Lagator-Group/De-Novo-Plasmid-Assembly-and-Annotation-Snakemake)

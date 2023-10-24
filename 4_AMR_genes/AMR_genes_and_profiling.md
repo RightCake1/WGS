@@ -37,3 +37,9 @@ Make table for resistance to merge data
 [Source Page and Details]https://github.com/klebgenomics/Kleborate
 
 I havent used Kleborate yet but this is the go to for Klebsiella spp. 
+
+
+5. Use *abriTAMR*
+[Source Page](https://github.com/MDU-PHL/abritamr)
+
+I havent used this yet. When I do I will try to drop some some steps for easier use. 
