@@ -13,8 +13,6 @@ Choose the perimeters
 
 Just add fasta file
 
-Make table for resistance to merge data
-
 3. *Abricate* 
 
 [Source Page](https://github.com/tseemann/abricate)
@@ -27,25 +25,11 @@ Code-
 
 `abricate Your_file.fasta`  - for single file
 
+Make table for resistance to merge data
 
-**Virulence factors**
+**Check Criteria for MDR, XDR, PDR**
 
-1. Virulence finder 
-
-[Main Page](http://www.mgc.ac.cn/VFs/) 
-
-[Accesible to all](http://www.mgc.ac.cn/VFs/main.htm)
+[Source Page](https://www.clinicalmicrobiologyandinfection.com/article/S1198-743X(14)61632-3/fulltext) Check this Article for details.
 
 
-**Mobile genetic elements finder**
-
-1. *MGE*
-
-[Source Page](https://www.genomicepidemiology.org/)   
-
-2. *IS-finder* 
-
-[Source Page](https://isfinder.biotoul.fr/blast/resultat.php?id=phpJAVCul&title=&prog=blastn) 
-
-3. 
 

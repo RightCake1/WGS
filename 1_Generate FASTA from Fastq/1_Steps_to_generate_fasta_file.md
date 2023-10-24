@@ -55,14 +55,4 @@ Code -
 
 `spades.py -1 R1p.fastq -2 R2p.fastq --careful --cov-cutoff auto -o spades_assembly_all_illumina`
 
-9.	Then run Quast – assembly quality control
 
-[Source Page](http://quast.sourceforge.net/docs/manual.html) 
-
-Code - 
-
-`python3 quast.py --min-contig 500 contigs.fasta`
-
-10.	Best matched file check and cut upto length 500 according to organism, hypo-protein (In case quast doesnt cut 500)
-
-11.	Choose file name – contigs.fasta or something according to your need

@@ -1,18 +1,3 @@
-**Annotations**
-
-
-*RAST*
-
-
-[Source Page](https://rast.nmpdr.org/rast.cgi?page=Upload)
-
-
-[Tutorial](https://www.theseed.org/wiki/SEED_Viewer_Tutorial)
-
-
-After running RAST, check seed viewer and go for analysis
-
-
 ALTERNATIVE TO RAST 
 
 
@@ -30,11 +15,10 @@ Code -
 
 2. Activate prokka enviroment 
 
-Code – 
+Code â€“ 
 
 `conda activate prokka`
 
 3. Then Code -
 
 `prokka file_name.fasta`
-
