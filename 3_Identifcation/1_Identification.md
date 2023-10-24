@@ -13,3 +13,9 @@ Go to Species ID and upload the fasta file
 3. Use *PathogenWatch*
 
 [Source Page](https://pathogen.watch/upload)
+
+4. Use *Kleborate*
+
+[Source Page and Details]https://github.com/klebgenomics/Kleborate
+
+I havent used Kleborate yet but this is the go to for Klebsiella spp. 
