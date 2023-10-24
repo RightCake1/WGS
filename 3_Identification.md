@@ -24,7 +24,7 @@ Code -
 
 [Source Page](https://github.com/tseemann/barrnap)
 
-Need to use .gff file from rast or prokka
+Need to use .gff file from prokka
 
 Code  - 
 

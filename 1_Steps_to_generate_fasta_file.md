@@ -4,21 +4,29 @@ Steps to generate Fasta File
 
 2.	Unzip
 
-3.	Rename them
+3.	You should get 4 files
 
-4.	Merge them in one fastq file using cat
+4.	Rename them for ease of convinience 
+
+5.	Merge them in one fastq file using cat for both reverse and forward read
+
+6. 	You will now have 2 fastq files. One for forward and one for reverse read
  
 Code –
  
-`cat file_names > new file_name`
+`cat file_names > new R1.fastq`
+`cat file_names > new R2.fastq`
 
-5.	Run fastqc on them
+5.	Run fastqc on the two files
 
 [Source Page](https://github.com/s-andrews/FastQC)
  
 Code -
 
-`fastqc name`
+`fastqc R1.fastq`
+`fastqc R2.fastq`
+
+Check the reports. If you see that there are red flags then you need to trim the sequence 
 
 6.	Run and trim the sequence using Trimmomatic   
 
@@ -28,7 +36,10 @@ Code -
 
 `java -jar /home/mustafa/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar PE -phred33 R1.fastq R2.fastq R1p.fastq R1u.fastq R2p.fastq R2u.fastq SLIDINGWINDOW:4:20 LEADING:20 TRAILING:20 CROP:147 HEADCROP:15 MINLEN:36`
 
-7.	Run fastq again using 
+u means unpaird ends and p means paired ends 
+Headcrop, Crop, Minlength should be kept as per required from the report from FastQC 
+
+7.	Run FastQC again using 
 
 `fastqc *.fastq`
 
@@ -42,8 +53,7 @@ Only paired used since unpaired can’t be used in assembly
 
 Code - 
 
-`spades.py -1 R1p.fastq -2 R2p.fastq --careful --cov-cutoff 
-auto -o spades_assembly_all_illumina`
+`spades.py -1 R1p.fastq -2 R2p.fastq --careful --cov-cutoff auto -o spades_assembly_all_illumina`
 
 9.	Then run Quast – assembly quality control
 
@@ -53,7 +63,6 @@ Code -
 
 `python3 quast.py --min-contig 500 contigs.fasta`
 
-10.	Best matched file check and cut upto length 500 according 
-to organism, hypo protein (In case quast doesnt cut 500)
+10.	Best matched file check and cut upto length 500 according to organism, hypo-protein (In case quast doesnt cut 500)
 
-11.	Choose file name – contigs.fasta
+11.	Choose file name – contigs.fasta or something according to your need
