@@ -43,21 +43,3 @@ Headcrop, Crop, Minlength should be kept as per required from the report from Fa
 
 `fastqc *.fastq`
 
-8.	Run spades for assembly and creating fasta file
-
-[Tutorial](http://sepsis-omics.github.io/tutorials/modules/spades_cmdline/)
-
-[Source Page](https://github.com/ablab/spades) 
-
-Only paired used since unpaired can’t be used in assembly
-
-Code - 
-
-`spades.py -1 R1p.fastq -2 R2p.fastq --careful --cov-cutoff auto -o spades_assembly_all_illumina`
-
-
-*BONUS*
-
-You can use SnakeMake (This for abit of advanced users)
-
-[Source Page](https://github.com/Lagator-Group/De-Novo-Plasmid-Assembly-and-Annotation-Snakemake)
