@@ -1,56 +1,48 @@
-**Pangenome**
+## Pangenome
 
-*Roary*
+### Roary
 
-[Source Page](https://github.com/sanger-pathogens/Roary#installation)
+- [Roary Source Page](https://github.com/sanger-pathogens/Roary#installation)
+- [Roary Paper](https://academic.oup.com/bioinformatics/article/31/22/3691/240757?login=true)
+- [Roary Tutorial](https://www.youtube.com/watch?v=7UWmi5l_LFM)
 
-[Paper](https://academic.oup.com/bioinformatics/article/31/22/3691/240757?login=true)
+**Requirements:**
+- Conda/Miniconda
+  - [Miniconda Source Page](https://github.com/conda/conda-docs/blob/main/docs/source/miniconda.rst)
+  - [Miniconda Installer](https://gist.github.com/arose13/fcc1d2d5ad67503ba9842ea64f6bac35)
 
-[Tutorial](https://www.youtube.com/watch?v=7UWmi5l_LFM)
+**Steps:**
 
-*Requires conda/miniconda* 
+1. Bring .gff files to Ubuntu home directory (not HDD).
 
-[Miniconda](https://github.com/conda/conda-docs/blob/main/docs/source/miniconda.rst)
+2. Create an environment.
+   ```bash
+   conda activate pangenome
+   ```
 
-[Miniconda Installer](https://gist.github.com/arose13/fcc1d2d5ad67503ba9842ea64f6bac35)
+3. Download the Python script from GitHub (python.py file). Refer to the YouTube link for this.
 
-Steps 
+4. Gather related strains.gff files from the Prokka folder.
 
-1. Bring .gff files ubuntu home and not hdd 
+5. Run Roary.
+   ```bash
+   roary -f roaryresults -p 6 -e -n -v --maft *.gff
+   ```
 
-2. Create environment 
+6. Get FastTree.
+   ```bash
+   FastTree -nt -gtr roaryresult/core_gene_alignment.aln > roaryresult/mytree.newick
+   ```
 
-Code - 
+7. Get images.
+   ```bash
+   python roary_plots.py --labels roaryresult/mytree.newick roaryresult/gene_presence_absence.csv
+   ```
 
-`conda activate pangenome`
+8. Move the images to the roaryresult folder.
 
-3. Download python script from github - python.py file 
-(Check the youtube link for this) 
+9. Make an SVG file.
+   ```bash
+   python roary_plots.py --labels --format svg roaryresult/mytree.newick roaryresult/gene_presence_absence.csv
+   ```
 
-4. Gather related strains.gff files from prokka folder
-
-5. Code for roary - 
-
-Code - 
-
-`roary -f roaryresults -p 6 -e -n -v --maft *.gff`
-
-6. Get Fast-tree 
-
-Code - 
-
-`FastTree -nt -gtr roaryresult/core_gene_alignment.aln > roaryresult/mytree.newic`
-
-7. Get images 
-
-Code - 
-
-`python roary_plots.py --labels roaryresult/mytree.newick roaryresult/gene_presence_absence.csv` 
-
-8. Move the images to folder roaryresult
-
-9. Make SVG file 
-
-Code - 
-
-`python roary_plots.py --labels --format svg roaryresult/mytree.newick roaryresult/gene_presence_absence.csv`
