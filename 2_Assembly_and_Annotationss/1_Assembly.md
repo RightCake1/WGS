@@ -1,5 +1,4 @@
-```markdown
-## Running SPAdes for Assembly and Creating Fasta File
+Running SPAdes for Assembly and Creating Fasta File
 
 ### SPAdes Command Line Tutorial
 - [Tutorial Link](http://sepsis-omics.github.io/tutorials/modules/spades_cmdline/)
