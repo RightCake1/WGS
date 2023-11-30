@@ -1,21 +1,23 @@
-**Identification**
+## Identification
 
-1. First use *pubmlst* 
+1. **PubMLST**
 
-[Source Page](https://pubmlst.org/)
+   - [PubMLST Source Page](https://pubmlst.org/)
+   - Go to Species ID and upload the fasta file.
 
-Go to Species ID and upload the fasta file
+2. **K-merFinder**
 
-2. Use *k-mer finder*
+   - [k-mer Finder Source Page](https://cge.cbs.dtu.dk/services/KmerFinder/)
+   - Upload the fasta file
 
-[Source Page](https://cge.cbs.dtu.dk/services/KmerFinder/)
+3. **PathogenWatch**
 
-3. Use *PathogenWatch*
+   - [PathogenWatch Source Page](https://pathogen.watch/upload)
+   - Create account and upload the fasta file
 
-[Source Page](https://pathogen.watch/upload)
+4. **Kleborate**
 
-4. Use *Kleborate*
+   - [Kleborate Source Page and Details](https://github.com/klebgenomics/Kleborate)
 
-[Source Page and Details]https://github.com/klebgenomics/Kleborate
+   Kleborate is particularly recommended for identifying Klebsiella spp.
 
-I havent used Kleborate yet but this is the go to for Klebsiella spp. 

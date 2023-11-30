@@ -1,21 +1,29 @@
-1. Find 16s-rna sequence using *Barnap* 
+## Finding 16S-rRNA Sequence
 
-[Source Page](https://github.com/tseemann/barrnap)
+### Barrnap
 
-Need to use .gff file from prokka
+- [Barrnap Source Page](https://github.com/tseemann/barrnap)
 
-Code  - 
+**Code:**
+```bash
+barrnap -o rrna.fa Your_file.fasta rrna.gff
+```
+  - This rRNA sequence can be used for Phylogenetic tree building
+### Alternative to Barrnap - Online Based
 
-`barrnap -o rrna.fa Your_file.fasta rrna.gff`
+#### Contest16s
 
-*Alternative to barnap - Online based barnap*
+- [Contest16s Source Page](https://www.ezbiocloud.net/tools/contest16s)
 
-*Contest16s*
+1. Upload the FASTA file.
+2. Open the generated .txt file to extract the 16S sequence.
+3. Use BLAST to find a match.
 
-[Source Page](https://www.ezbiocloud.net/tools/contest16s)
+### Table
 
-Just Upload the fasta file 
+| Tool                | Source Page                               | Code/Instructions                                       |
+|---------------------|-------------------------------------------|----------------------------------------------------------|
+| Barrnap             | [Barrnap Source Page](https://github.com/tseemann/barrnap) | `barrnap -o rrna.fa Your_file.fasta rrna.gff`            |
+| Contest16s (Online) | [Contest16s Source Page](https://www.ezbiocloud.net/tools/contest16s) | Upload FASTA, extract sequence from .txt, use BLAST to find match |
 
-then open .txt file and take 16s sequence and blast to find match
-
-Make table for these
+Feel free to copy and paste this content into your Markdown file.
