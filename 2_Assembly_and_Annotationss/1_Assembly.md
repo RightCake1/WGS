@@ -1,25 +1,24 @@
-Run spades for assembly and creating fasta file
+```markdown
+## Running SPAdes for Assembly and Creating Fasta File
 
-[Tutorial](http://sepsis-omics.github.io/tutorials/modules/spades_cmdline/)
+### SPAdes Command Line Tutorial
+- [Tutorial Link](http://sepsis-omics.github.io/tutorials/modules/spades_cmdline/)
+- [SPAdes Source Page](https://github.com/ablab/spades)
 
-[Source Page](https://github.com/ablab/spades) 
+### Assembly using Paired Reads
+```bash
+spades.py -1 R1p.fastq -2 R2p.fastq --careful --cov-cutoff auto -o spades_assembly
+```
 
-Only paired are used since unpaired can’t be used in assembly
+### Reference-Based Assembly
+For reference-based assembly, a reference sequence is required.
+```bash
+spades -1 R1p.fastq -2 R2p.fastq --careful --cov-cutoff auto --careful --trusted-contigs Reference.fasta -o spades_assembly
+```
 
-Code - 
+### Web-Based Assemblies
+[Bacterial and Viral Bioinformatics Resource Center](https://www.bv-brc.org/) provides alternative methods for web-based assemblies with different techniques.
 
-`spades.py -1 R1p.fastq -2 R2p.fastq --careful --cov-cutoff auto -o spades_assembly_all_illumina`
+### Bonus: SnakeMake for Advanced Users
+- [SnakeMake Source Page](https://github.com/Lagator-Group/De-Novo-Plasmid-Assembly-and-Annotation-Snakemake)
 
-For reference based assembly, we need reference sequence first
-
-Code - 
-
-`spades -1 R1p.fastq -2 R2p.fastq --careful --cov-cutoff auto --careful --trusted-contigs Reference.fasta -o spades_assembly_all_illumina`
-
-For web based assemblies [Bacterial and viral bioinformatics resource center](https://www.bv-brc.org/) is a good alternative. It have different methods for assembly.
-
-*BONUS*
-
-You can use SnakeMake (This for abit of advanced users)
-
-[Source Page](https://github.com/Lagator-Group/De-Novo-Plasmid-Assembly-and-Annotation-Snakemake)

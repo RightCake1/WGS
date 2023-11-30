@@ -51,4 +51,4 @@ seqkit split -i fasta.file
 ```bash
 seqkit fx2tab seqs.msa.fa
 ```
-```
+
