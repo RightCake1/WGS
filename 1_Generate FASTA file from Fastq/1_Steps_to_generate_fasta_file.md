@@ -1,7 +1,5 @@
 Steps to Generate Fasta File
 
-```markdown
-
 1. **Get Fastq Sequence**
 
 2. **Unzip**
