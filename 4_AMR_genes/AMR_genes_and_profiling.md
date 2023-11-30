@@ -1,45 +1,33 @@
-**AMR**
+## Antimicrobial Resistance (AMR)
 
-1. *Resfinder*
+1. **Resfinder**
+   - [Resfinder Source Page](https://cge.cbs.dtu.dk/services/ResFinder/)
+   - Upload the FASTA file and choose the parameters.
 
-[Source Page](https://cge.cbs.dtu.dk/services/ResFinder/)
+2. **RGI - Resistance Gene Identifier**
+   - [RGI Source Page](https://card.mcmaster.ca/analyze/rgi)
+   - Add the FASTA file for analysis.
 
-Just upload fasta file
-Choose the perimeters 
+3. **Abricate**
+   - [Abricate Source Page](https://github.com/tseemann/abricate)
+   - [Abricate Tutorial](https://www.youtube.com/watch?v=2SKrbweUFr8) - 15.19 min
+   - Code:
+     ```bash
+     abricate *.fasta   # For multiple files
+     abricate Your_file.fasta   # For a single file
+     ```
 
-2. *RGI - Resistance gene identifier*
+   - Create a table to merge resistance data.
 
-[Source Page](https://card.mcmaster.ca/analyze/rgi) 
+4. **Check Criteria for MDR, XDR, PDR**
+   - [Source Page](https://www.clinicalmicrobiologyandinfection.com/article/S1198-743X(14)61632-3/fulltext)
+   - Refer to this article for details on criteria for Multidrug Resistance (MDR), Extensively Drug Resistance (XDR), and Pandrug Resistance (PDR).
 
-Just add fasta file
+5. **Kleborate**
+   - [Kleborate Source Page and Details](https://github.com/klebgenomics/Kleborate)
+   - Recommended for Klebsiella spp.
 
-3. *Abricate* 
+6. **abriTAMR**
+   - [abriTAMR Source Page](https://github.com/MDU-PHL/abritamr)
+   - Instructions may be available on the source page.
 
-[Source Page](https://github.com/tseemann/abricate)
-
-[Tutorial](https://www.youtube.com/watch?v=2SKrbweUFr8)  - 15.19 min
-
-Code-
-
-`abricate *.fasta` - for multiple files
-
-`abricate Your_file.fasta`  - for single file
-
-Make table for resistance to merge data
-
-**Check Criteria for MDR, XDR, PDR**
-
-[Source Page](https://www.clinicalmicrobiologyandinfection.com/article/S1198-743X(14)61632-3/fulltext) Check this Article for details.
-
-
-4. Use *Kleborate*
-
-[Source Page and Details]https://github.com/klebgenomics/Kleborate
-
-I havent used Kleborate yet but this is the go to for Klebsiella spp. 
-
-
-5. Use *abriTAMR*
-[Source Page](https://github.com/MDU-PHL/abritamr)
-
-I havent used this yet. When I do I will try to drop some some steps for easier use. 
