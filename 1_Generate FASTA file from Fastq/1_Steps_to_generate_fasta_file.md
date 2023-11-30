@@ -1,5 +1,6 @@
+Steps to Generate Fasta File
+
 ```markdown
-## Steps to Generate Fasta File
 
 1. **Get Fastq Sequence**
 
