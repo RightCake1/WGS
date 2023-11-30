@@ -6,6 +6,6 @@
 ```bash
 python3 quast.py --min-contig ### contigs.fasta
 ```
-### - Insert number
-This command is used to run QUAST for assembly quality control, specifically filtering out contigs below ### number of base pairs. 
+- Insert number
+-This command is used to run QUAST for assembly quality control, specifically filtering out contigs below ### number of base pairs. 
 If needed, manual filtering can also be performed.

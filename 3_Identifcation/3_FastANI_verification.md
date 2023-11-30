@@ -1,13 +1,18 @@
-1. Uss *fastANI* –  
+## Using fastANI
 
-Firstly download refseq first, rename it then run code
+1. **Download RefSeq**
+   - Download the RefSeq file and rename it.
 
-Code - 
+2. **Run fastANI**
+   - Code:
+     ```bash
+     ./fastANI -q Your_File.fasta -r RefSeq.fasta -o FastANI.txt
+     ```
+   - **Note:** Match should be 95% or higher.
 
-`./fastANI -q Your_File.fasta -r RefSeq.fasta -o FastANI.txt`
+## Proksee for Visualization and Additional Features
 
-**NOTE** Needs to be 95% or higher for match
+- [Proksee Source Page](https://proksee.ca/)
 
-2. Use *Proksee* for visualization and other features for FastANI
+Proksee is recommended for visualization and additional features when working with FastANI results.
 
-[Source Page](https://proksee.ca/)

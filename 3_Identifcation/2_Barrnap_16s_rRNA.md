@@ -26,4 +26,3 @@ barrnap -o rrna.fa Your_file.fasta rrna.gff
 | Barrnap             | [Barrnap Source Page](https://github.com/tseemann/barrnap) | `barrnap -o rrna.fa Your_file.fasta rrna.gff`            |
 | Contest16s (Online) | [Contest16s Source Page](https://www.ezbiocloud.net/tools/contest16s) | Upload FASTA, extract sequence from .txt, use BLAST to find match |
 
-Feel free to copy and paste this content into your Markdown file.
