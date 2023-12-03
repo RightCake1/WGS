@@ -29,4 +29,3 @@ After running RAST, examine the SEED Viewer for further analysis.
     ```bash
     prokka file_name.fasta
     ```
-

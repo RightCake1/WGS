@@ -20,6 +20,7 @@
 5. **Prophage Sequences**
    - Use PHASTER (Phage Search Tool Enhanced Release) web tool.
    - [PHASTER Source Page](https://phaster.ca/)
+   - Use Abricate to find virulence of the 
 
 6. Find CRISPR arrays and CAS genes using the CRISPR-Cas++ tool in the [Proksee Source Page](https://proksee.ca/).
 
