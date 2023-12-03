@@ -9,6 +9,7 @@
 
 2. Use Blastn to find and identify the most similar matches.
    - [Blastn Tutorial](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
+   - Select and download aligned sequences in a .txt file format. Option in available in the web server itself. Download the csv file to keep track. 
 
 3. Install MEGA11 software.
    - [MEGA11 Download Page](https://www.megasoftware.net/)
