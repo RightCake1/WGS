@@ -14,6 +14,7 @@ cat new_R1.fastq.gz > new_R1.fastq
 cat new_R2.fastq.gz > new_R2.fastq
 
 # Step 5: Run FastQC on the 2 Merged Files
+sudo apt-get install fastqc
 fastqc new_R1.fastq
 fastqc new_R2.fastq
 

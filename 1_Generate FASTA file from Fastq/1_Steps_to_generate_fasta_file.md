@@ -36,4 +36,17 @@ Steps to Generate Fasta File
    ```bash
    fastqc *.fastq
    ```
-```
+
+
+OR 
+
+./generate_fasta.sh
+./trim_and_fastqc.sh
+
+
+or 
+
+
+./trim_and_fastqc.sh
+
+use this if you already know the parameters fro Trimommatic 
