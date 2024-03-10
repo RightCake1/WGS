@@ -34,3 +34,8 @@
    platon --db db --output PlatonResults Your_file.fasta
    ```
 
+4. **Run MOB-suite**
+   ```bash
+   mob_recon -i contigs.fasta -o Plasmids_list
+   ```
+   [USE ABRICATE TO FIND AMR GENES FROM THE SEQUENCES HERE]

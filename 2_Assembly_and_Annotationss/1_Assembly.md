@@ -15,11 +15,6 @@ For reference-based assembly, a reference sequence is required.
 spades -1 R1p.fastq -2 R2p.fastq --careful --cov-cutoff auto --careful --trusted-contigs Reference.fasta -o spades_assembly_reference_based
 ```
 
-or 
-
-.run_spades.sh
-
-
 ### Web-Based Assemblies
 [Bacterial and Viral Bioinformatics Resource Center](https://www.bv-brc.org/) provides alternative methods for web-based assemblies with different techniques.
 
