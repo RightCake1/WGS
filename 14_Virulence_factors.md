@@ -42,12 +42,12 @@ A comprehensive guide for identifying bacterial virulence factors using various 
 
 ## BIGSdb-Pasteur
 
-## Access
+### Access
 
 Visit BIGSdb-Pasteur Database
 Register for an account if required
 
-Analysis Tools
+### Analysis Tools
 1. Sequence Query
 CopyQuery → Sequence Query
 - Upload FASTA file
@@ -63,7 +63,7 @@ CopyQuery → Locus/Scheme Query
 - Search specific virulence genes
 - Browse available schemes
 - Download sequences
-Step-by-Step Usage Guide
+### Step-by-Step Usage Guide
 
 Data Preparation
 
@@ -81,7 +81,7 @@ c. Select analysis parameters:
    - Identity threshold
 d. Submit query
 
-Results Interpretation
+### Results Interpretation
 
 Review matching sequences
 Check similarity scores
@@ -89,7 +89,7 @@ Examine alignment details
 Download results
 
 
-Advanced Analysis
+### Advanced Analysis
 Copya. Click "Analyze Further"
 b. Choose analysis type:
    - Multiple sequence alignment
@@ -99,7 +99,7 @@ c. Set parameters
 d. Run analysis
 
 
-Output Formats
+### Output Formats
 
 FASTA sequences
 Alignment files
@@ -107,7 +107,7 @@ Phylogenetic trees
 TSV/CSV tables
 PDF reports
 
-Best Practices
+## Best Practices
 
 Start with default parameters
 Use batch submission for multiple sequences
@@ -115,7 +115,7 @@ Save session IDs for future reference
 Download results immediately
 Document analysis parameters
 
-Troubleshooting Tips
+## Troubleshooting Tips
 
 Check sequence format
 Verify file size limits
@@ -123,14 +123,9 @@ Ensure proper sequence headers
 Monitor submission status
 Contact support if needed
 
-Additional Resources
+## Additional Resources
 
 BIGSdb User Guide
 Video Tutorials
 FAQ Section
-
-## Citation
-When using these tools, please cite:
-```
-[Add citations for VFDB and BIGSdb-Pasteur]
 ```
