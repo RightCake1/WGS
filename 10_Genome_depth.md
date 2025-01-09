@@ -41,46 +41,17 @@ bowtie2-build --large-index reference.fasta reference_index
 ```
 
 ### 2. Perform Read Mapping
-
-#### BWA-MEM Mapping
 ```bash
-# Basic mapping
-bwa mem reference.fasta reads_R1.fastq reads_R2.fastq > output.sam
-
-# Advanced mapping with multiple threads
-bwa mem -t 12 Your_file.fasta R1p.fastq R2p.fastq > Your_file.sam
-```
-
-#### Bowtie2 Mapping
-```bash
-# Basic paired-end mapping
-bowtie2 \
-    -x reference_index \
-    -1 reads_R1.fastq \
-    -2 reads_R2.fastq \
-    -S output.sam
-
-# Advanced mapping options
-bowtie2 \
-    -x reference_index \
-    -1 reads_R1.fastq \
-    -2 reads_R2.fastq \
-    --sensitive-local \
-    --threads 12 \
-    --maxins 1000 \
-    --rg-id sample \
-    --rg "SM:sample" \
-    -S output.sam
-```
-
-### 3. SAM/BAM Processing
-
-```bash
-# Convert SAM to BAM
-samtools view -S -b input.sam > output.bam
-
-# Sort BAM file
-samtools sort Your_file.bam --reference Your_file.fasta > Your_file_sort.bam
+a) Indexed. Code:
+bwa index contigs.fasta
+b) Made SAM file. Code:
+bwa mem -t 12 contigs.fasta R1p.fastq R2p.fastq > contigs.sam 
+c) Converted SAM to BAM. Code:
+samtools view -S -b contigs.sam > contigs.bam
+d) Sorted Alignment. Code:
+samtools sort contigs.bam --reference contigs.fasta > contigs_sort.bam
+e) Checked Mean Read Depth. Code:
+samtools depth -a contigs_sort.bam | awk '{c++;s+=$3}END{print s/c}'
 ```
 
 ### 4. Coverage Analysis
