@@ -39,24 +39,24 @@ samtools depth -a contigs_sort.bam | awk '{c++;s+=$3}END{print s/c}'
 
 ```bash
 # Basic coverage statistics
-samtools coverage sorted.bam
+samtools coverage contigs_sort.bam
 
 # Detailed per-base coverage
-samtools depth -a sorted.bam > coverage.txt
+samtools depth -a contigs_sort.bam > coverage.txt
 
 # Mean read depth
-samtools depth -a sorted.bam | \
+samtools depth -a contigs_sort.bam | \
     awk '{c++;s+=$3}END{print "Mean depth = " s/c}'
 
 # Coverage breadth (percentage of reference covered)
-samtools depth -a Your_file_sort.bam | awk '{c++;s+=$3}END{print s/c}'
+samtools depth -a contigs_sort.bam | awk '{c++;s+=$3}END{print s/c}'
 
 or 
 
-samtools depth -a Your_file.bam | awk '{c++; if($3>0) total+=1}END{print (total/c)*100}'
+samtools depth -a contigs_sort.bam | awk '{c++; if($3>0) total+=1}END{print (total/c)*100}'
 
 # Coverage at different thresholds
-samtools depth -a sorted.bam | \
+samtools depth -a contigs_sort.bam | \
     awk '{c++; if($3>=10) d10++; if($3>=20) d20++; if($3>=30) d30++}END{
         print "≥10x coverage: " (d10/c)*100 "%"
         print "≥20x coverage: " (d20/c)*100 "%"
