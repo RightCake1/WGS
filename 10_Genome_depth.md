@@ -23,15 +23,15 @@ bowtie2 --version
 
 ### 2. Perform Read Mapping
 ```bash
-a) Indexed. Code:
+# Indexed. Code:
 bwa index contigs.fasta
-b) Made SAM file. Code:
+# Made SAM file. Code:
 bwa mem -t 12 contigs.fasta R1p.fastq R2p.fastq > contigs.sam 
-c) Converted SAM to BAM. Code:
+# Converted SAM to BAM. Code:
 samtools view -S -b contigs.sam > contigs.bam
-d) Sorted Alignment. Code:
+# Sorted Alignment. Code:
 samtools sort contigs.bam --reference contigs.fasta > contigs_sort.bam
-e) Checked Mean Read Depth. Code:
+# Checked Mean Read Depth. Code:
 samtools depth -a contigs_sort.bam | awk '{c++;s+=$3}END{print s/c}'
 ```
 
