@@ -47,9 +47,6 @@ tar -xvf sequence_files.tar.gz
 mkdir -p {raw_data,trimmed,fastqc_reports,final_output}
 
 # Rename files for clarity
-# Convention: [sample_name]_[read_direction].fastq
-mv original_R1_001.fastq sample1_R1.fastq
-mv original_R2_001.fastq sample1_R2.fastq
 ```
 
 ### 4. Merging Multiple FASTQ Files
@@ -59,13 +56,13 @@ mv original_R2_001.fastq sample1_R2.fastq
 cat sample1_L001_R1.fastq \
     sample1_L002_R1.fastq \
     sample1_L003_R1.fastq \
-    sample1_L004_R1.fastq > merged_R1.fastq
+    sample1_L004_R1.fastq > R1.fastq
 
 # Merge reverse reads
 cat sample1_L001_R2.fastq \
     sample1_L002_R2.fastq \
     sample1_L003_R2.fastq \
-    sample1_L004_R2.fastq > merged_R2.fastq
+    sample1_L004_R2.fastq > R2.fastq
 
 # Verify file sizes
 ls -lh merged_*.fastq
@@ -75,7 +72,7 @@ ls -lh merged_*.fastq
 
 ```bash
 # Basic usage
-fastqc merged_R1.fastq merged_R2.fastq
+fastqc R1.fastq R2.fastq
 
 # Advanced usage
 fastqc \
@@ -83,7 +80,7 @@ fastqc \
     --threads 4 \
     --noextract \
     --format fastq \
-    merged_R*.fastq
+    R*.fastq
 
 # Run on multiple files in parallel
 fastqc *.fastq
@@ -103,29 +100,15 @@ Key metrics to examine:
 
 ```bash
 # Basic paired-end trimming
+# Can exclude R1U and R2U since we wont be needing them as they are unpaired reads
 trimmomatic PE \
     -phred33 \
-    merged_R1.fastq merged_R2.fastq \
-    trimmed_R1P.fastq trimmed_R1U.fastq \
-    trimmed_R2P.fastq trimmed_R2U.fastq \
+    R1.fastq R2.fastq \
+    R1P.fastq R1U.fastq \ 
+    R2P.fastq R2U.fastq \
     SLIDINGWINDOW:4:20 \
     LEADING:20 \
     TRAILING:20 \
-    MINLEN:36
-
-# Advanced trimming with adapter removal
-trimmomatic PE \
-    -phred33 \
-    -threads 4 \
-    merged_R1.fastq merged_R2.fastq \
-    trimmed_R1P.fastq trimmed_R1U.fastq \
-    trimmed_R2P.fastq trimmed_R2U.fastq \
-    ILLUMINACLIP:/path/to/adapters/TruSeq3-PE.fa:2:30:10 \
-    SLIDINGWINDOW:4:20 \
-    LEADING:20 \
-    TRAILING:20 \
-    CROP:147 \
-    HEADCROP:15 \
     MINLEN:36
 ```
 

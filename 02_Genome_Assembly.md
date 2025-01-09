@@ -6,9 +6,9 @@ In this guide, I'll walk you through using SPAdes (St. Petersburg genome assembl
 ## Installation
 
 ```bash
-# Via conda
-conda create -n spades spades
-conda activate spades
+wget https://github.com/ablab/spades/releases/download/v4.0.0/SPAdes-4.0.0-Linux.tar.gz
+tar -xzf SPAdes-4.0.0-Linux.tar.gz
+cd SPAdes-4.0.0-Linux/bin/
 
 # Verify installation
 spades.py --version
@@ -121,6 +121,7 @@ For high-throughput or repetitive assemblies:
 - [SPAdes GitHub Repository](https://github.com/ablab/spades)
 - [SPAdes Manual](http://cab.spbu.ru/files/release3.15.5/manual.html)
 - [Tutorial](http://sepsis-omics.github.io/tutorials/modules/spades_cmdline/)
+- [fastp](https://github.com/OpenGene/fastp)
 
 ---
 **Note**: This guide covers basic usage. For advanced features and detailed parameters, consult the [official documentation](https://github.com/ablab/spades).

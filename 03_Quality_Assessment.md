@@ -3,15 +3,18 @@
 ## Introduction
 QUAST (QUality ASsessment Tool) is an excellent tool for evaluating genome assemblies. It provides comprehensive quality metrics that are crucial for assessing the quality of your assemblies. 
 
-## Installation
-
 ```bash
-# Via conda (recommended)
-conda create -n quast quast
-conda activate quast
+## Installation
+conda create -n bioinfo_quast python=3.8
+conda activate bioinfo_quast
 
-# Via pip
-pip install quast
+# Ensure channels are added in the right order
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+
+# Try installing QUAST again
+conda install -c bioconda quast
 
 # Verify installation
 quast.py --version
@@ -23,7 +26,7 @@ quast.py --version
 
 ```bash
 # Basic usage
-quast.py assembly.fasta -o quast_output
+python3 quast.py contigs.fasta
 
 # Multiple assemblies comparison
 quast.py \
@@ -59,23 +62,6 @@ quast.py \
     -r reference.fasta \
     -g genes.gff \
     -o annotated_assessment
-```
-
-### Metagenome Assessment
-
-```bash
-# Metagenomic assembly assessment
-quast.py \
-    --meta \
-    metagenomic_assembly.fasta \
-    -o meta_assessment
-
-# With reference genomes
-quast.py \
-    --meta \
-    metagenomic_assembly.fasta \
-    -r ref1.fasta,ref2.fasta \
-    -o meta_ref_assessment
 ```
 
 ## Common Parameters
