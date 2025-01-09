@@ -9,12 +9,6 @@ This repository is a living document that evolves with my learning process in bi
 ## Note - This is heavily dependant on linux with some web-based tools!
 
 ## 🎯 What You'll Find
-The repository includes comprehensive documentation on:
-- Genome assembly and quality assessment
-- Gene prediction and annotation
-- Comparative genomics workflows
-- Popular bioinformatics tools and their applications
-
 Each procedure is documented with clear instructions and explanations of the underlying concepts, making it easier for you to follow along and understand the processes.
 
 ## 🔄 Continuous Updates
