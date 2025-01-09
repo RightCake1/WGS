@@ -177,7 +177,7 @@ kleborate \
 * [CGE Tools](https://cge.cbs.dtu.dk/services/)
 * [NCBI Pathogen Detection](https://www.ncbi.nlm.nih.gov/pathogens/)
 * [BacWGSTdb](http://bacdb.org/BacWGSTdb/)
-- [Kleborate](https://kleborate.readthedocs.io/en/latest/Installation.html)
+* [Kleborate](https://kleborate.readthedocs.io/en/latest/Installation.html)
 * [Bacterial Typing Tools Directory](https://www.applied-maths.com/applications/bacterial-typing)
 
 ---

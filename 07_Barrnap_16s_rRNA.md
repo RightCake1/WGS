@@ -22,14 +22,14 @@ barrnap --version
 #### Basic Usage
 ```bash
 # Simple run
-barrnap genome.fasta > output.gff3
+barrnap contigs.fasta > output.gff3
 
 # Generate FASTA output
-barrnap -o rRNA.fasta genome.fasta > output.gff3
+barrnap -o rRNA.fasta contigs.fasta > output.gff3
 
 # Species-specific search
-barrnap --kingdom bac genome.fasta > bacteria.gff3
-barrnap --kingdom arc genome.fasta > archaea.gff3
+barrnap --kingdom bac contigs.fasta > bacteria.gff3
+barrnap --kingdom arc contigs.fasta > archaea.gff3
 ```
 
 #### Advanced Options
@@ -41,10 +41,10 @@ barrnap \
     --lencutoff 0.8 \
     --reject 0.25 \
     --evalue 1e-6 \
-    genome.fasta > detailed_output.gff3
+    contigs.fasta > detailed_output.gff3
 
 # Extract specific rRNA types
-barrnap genome.fasta | \
+barrnap contigs.fasta | \
     awk '$3 == "16S_rRNA"' > 16S_locations.gff3
 ```
 
@@ -78,10 +78,10 @@ rnammer -v
 #### Usage
 ```bash
 # Basic prediction
-rnammer -S bac -m lsu,ssu,tsu -gff output.gff -f output.fasta genome.fasta
+rnammer -S bac -m lsu,ssu,tsu -gff output.gff -f output.fasta contigs.fasta
 
 # Specific 16S prediction
-rnammer -S bac -m ssu -gff 16S.gff -f 16S.fasta genome.fasta
+rnammer -S bac -m ssu -gff 16S.gff -f 16S.fasta contigs.fasta
 ```
 
 ## Web-based Tools

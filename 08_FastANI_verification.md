@@ -56,13 +56,13 @@ ls query_*.fasta > query_list.txt
 ```bash
 # Single query vs single reference
 fastANI \
-    -q query.fasta \
+    -q contigs.fasta \
     -r reference.fasta \
     -o output.txt
 
 # Single query vs multiple references
 fastANI \
-    -q query.fasta \
+    -q contigs.fasta \
     --rl reference_list.txt \
     -o multi_ref_output.txt
 
@@ -77,7 +77,7 @@ fastANI \
 ```bash
 # Adjust fragment size and minimum matches
 fastANI \
-    -q query.fasta \
+    -q contigs.fasta \
     -r reference.fasta \
     --fragLen 1000 \
     --minFraction 0.5 \
@@ -85,7 +85,7 @@ fastANI \
 
 # Use multiple threads
 fastANI \
-    -q query.fasta \
+    -q contigs.fasta \
     -r reference.fasta \
     --threads 8 \
     -o threaded_output.txt
