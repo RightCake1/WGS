@@ -20,25 +20,6 @@ bowtie2 --version
 
 ## Read Mapping Workflow
 
-### 1. Prepare Reference Genome
-
-#### Using BWA
-```bash
-# Index reference genome
-bwa index reference.fasta
-
-# For large genomes, use bwtsw algorithm
-bwa index -a bwtsw reference.fasta
-```
-
-#### Using Bowtie2
-```bash
-# Build Bowtie2 index
-bowtie2-build reference.fasta reference_index
-
-# For large genomes, use --large-index
-bowtie2-build --large-index reference.fasta reference_index
-```
 
 ### 2. Perform Read Mapping
 ```bash
