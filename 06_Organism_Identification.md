@@ -52,18 +52,6 @@ This guide covers various tools and platforms for bacterial species identificati
 * Confidence score
 * Template coverage
 * Depth of identification
-* Contamination indicators
-
-#### Local Installation
-```bash
-# Via conda
-conda create -n kmerfinder
-conda activate kmerfinder
-conda install -c bioconda kmerfinder
-
-# Database setup
-kmerfinder database download
-```
 
 ### 3. PathogenWatch
 **Website**: [https://pathogen.watch/](https://pathogen.watch/)
@@ -102,7 +90,7 @@ kmerfinder database download
   * Global context
   * Temporal analysis
 
-### 4. Kleborate
+### 4. Kleborate [Only for klebsiella species]
 **Purpose**: Specialized tool for Klebsiella species  
 **Source**: [GitHub Repository](https://github.com/klebgenomics/Kleborate)
 
@@ -125,14 +113,14 @@ python setup.py install
 #### Basic Usage
 ```bash
 # Single genome analysis
-kleborate -a assembly.fasta -o output.txt
+kleborate -a contigs.fasta -o output.csv
 
 # Multiple genome analysis
 kleborate -a *.fasta -o batch_output.txt
 
 # Advanced options
 kleborate \
-    -a assembly.fasta \
+    -a contigs.fasta \
     --resistance \
     --virulence \
     --kaptive_k \
@@ -189,6 +177,7 @@ kleborate \
 * [CGE Tools](https://cge.cbs.dtu.dk/services/)
 * [NCBI Pathogen Detection](https://www.ncbi.nlm.nih.gov/pathogens/)
 * [BacWGSTdb](http://bacdb.org/BacWGSTdb/)
+- [Kleborate](https://kleborate.readthedocs.io/en/latest/Installation.html)
 * [Bacterial Typing Tools Directory](https://www.applied-maths.com/applications/bacterial-typing)
 
 ---

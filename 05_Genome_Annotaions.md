@@ -49,10 +49,10 @@ prokka --version
 ### Basic Usage
 ```bash
 # Simple annotation
-prokka genome.fasta
+prokka contigs.fasta
 
 # Specify output directory
-prokka --outdir mygenome genome.fasta
+prokka --outdir mygenome contigs.fasta
 
 # Annotate multiple genomes
 for file in *.fasta; do
@@ -109,6 +109,7 @@ done
 - [RAST Tutorial](https://www.theseed.org/wiki/SEED_Viewer_Tutorial)
 - [Prokka GitHub](https://github.com/tseemann/prokka)
 - [NCBI Prokaryotic Annotation Guidelines](https://www.ncbi.nlm.nih.gov/genbank/genomesubmit/)
+- [Bakta](https://github.com/oschwengers/bakta)
 
 ---
 **Note**: For detailed parameters and advanced usage, refer to each tool's documentation.

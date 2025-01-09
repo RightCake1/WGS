@@ -38,7 +38,7 @@ quast.py \
 
 ```bash
 # Filter contigs shorter than 1000 bp
-quast.py --min-contig 1000 assembly.fasta -o quast_filtered
+quast.py --min-contig 1000 contigs.fasta -o quast_filtered
 
 # Common minimum contig lengths:
 # Bacterial genomes: 200-500 bp
@@ -52,13 +52,13 @@ quast.py --min-contig 1000 assembly.fasta -o quast_filtered
 ```bash
 # Compare assembly against reference genome
 quast.py \
-    assembly.fasta \
+    contigs.fasta \
     -r reference.fasta \
     -o reference_based_assessment
 
 # Include gene annotations
 quast.py \
-    assembly.fasta \
+    contigs.fasta \
     -r reference.fasta \
     -g genes.gff \
     -o annotated_assessment
