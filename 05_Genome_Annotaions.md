@@ -54,25 +54,10 @@ prokka genome.fasta
 # Specify output directory
 prokka --outdir mygenome genome.fasta
 
-# Add species information
-prokka --outdir mygenome --genus Escherichia --species coli genome.fasta
-
 # Annotate multiple genomes
 for file in *.fasta; do
     prokka --outdir "${file%.fasta}_annot" "$file"
 done
-```
-
-### Common Options
-```bash
-# Full annotation with all features
-prokka --compliant --centre XXX --locustag ABCD genome.fasta
-
-# Quick annotation (fast but fewer features)
-prokka --fast genome.fasta
-
-# Custom protein database
-prokka --proteins mydb.faa genome.fasta
 ```
 
 ### Output Files

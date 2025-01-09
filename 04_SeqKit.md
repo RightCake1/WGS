@@ -19,10 +19,10 @@ brew install seqkit
 Display sequence content:
 ```bash
 # View sequence file content
-cat contigs.fa
+cat contigs.fasta
 
 # Quick peek at first few sequences
-head contigs.fa
+head contigs.fasta
 ```
 
 ### Sequence Statistics
@@ -30,7 +30,7 @@ head contigs.fa
 Basic sequence statistics:
 ```bash
 # Stats for a single file
-seqkit stat input.fa
+seqkit stat contigs.fasta
 
 # Stats for multiple files with additional info
 seqkit stats *.f{a,q}.gz -a
@@ -44,19 +44,19 @@ seqkit stats *.f{a,q}.gz -a
 Sort sequences:
 ```bash
 # Sort by sequence length (longest to shortest)
-seqkit sort --by-length input.fa > sorted.fa
+seqkit sort --by-length contigs.fasta > sorted.fasta
 
 # Sort by sequence length (shortest to longest)
-seqkit sort --by-length --reverse input.fa > sorted_reverse.fa
+seqkit sort --by-length --reverse contigs.fasta > sorted_reverse.fasta
 ```
 
 Split sequences:
 ```bash
 # Split multi-FASTA into separate files
-seqkit split -i input.fasta
+seqkit split -i contigs.fasta
 
 # Split by size (e.g., 1000 sequences per file)
-seqkit split -s 1000 input.fasta
+seqkit split -s 1000 contigs.fasta
 ```
 
 ### Sequence Extraction
@@ -64,13 +64,13 @@ seqkit split -s 1000 input.fasta
 Extract subsequences:
 ```bash
 # First 12 bases
-seqkit subseq -r 1:12 input.fasta > first12.fasta
+seqkit subseq -r 1:12 contigs.fasta > first12.fasta
 
 # Last 12 bases
-seqkit subseq -r -12:-1 input.fasta > last12.fasta
+seqkit subseq -r -12:-1 contigs.fasta > last12.fasta
 
 # Remove first and last 12 bases
-seqkit subseq -r 13:-13 input.fasta > trimmed.fasta
+seqkit subseq -r 13:-13 contigs.fasta > trimmed.fasta
 ```
 
 ### Format Conversion
@@ -78,10 +78,10 @@ seqkit subseq -r 13:-13 input.fasta > trimmed.fasta
 Convert between formats:
 ```bash
 # FASTA to tabular format
-seqkit fx2tab input.fa > output.tab
+seqkit fx2tab contigs.fasta > output.tab
 
 # Tabular to FASTA format
-seqkit tab2fx input.tab > output.fa
+seqkit tab2fx input.tab > output.fasta
 ```
 
 ## Tips and Best Practices
