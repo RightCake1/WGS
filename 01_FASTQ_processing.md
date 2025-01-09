@@ -1,7 +1,7 @@
 # FASTQ to FASTA Processing Guide
 
 ## Introduction
-This guide outlines the step-by-step process of handling FASTQ sequence files, performing quality control, and preparing them for downstream analysis. The workflow includes file management, quality assessment, and sequence trimming.
+This guide is all about handling FASTQ sequence files, performing quality control, and getting them ready for downstream analysis. I've put together this step-by-step workflow to help manage files, assess quality, and trim sequences effectively.
 
 ## Prerequisites
 
@@ -25,6 +25,7 @@ trimmomatic -version
   * NCBI Sequence Read Archive (SRA)
   * European Nucleotide Archive (ENA)
   * Commercial sequencing providers
+  * Provided by supervisors
 
 ### 2. File Decompression
 
@@ -85,7 +86,7 @@ fastqc \
     merged_R*.fastq
 
 # Run on multiple files in parallel
-parallel "fastqc {}" ::: *.fastq
+fastqc *.fastq
 ```
 
 #### Interpreting FastQC Reports
@@ -153,10 +154,6 @@ trimmomatic PE \
 * **MINLEN:36**
   * Discard reads below this length
   * Adjust based on downstream analysis needs
-  * Typical ranges:
-    * Assembly: 50-100
-    * RNA-Seq: 36-50
-    * ChIP-Seq: 30-50
 
 ### 7. Post-trimming Quality Control
 

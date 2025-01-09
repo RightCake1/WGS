@@ -1,7 +1,7 @@
 # SPAdes Genome Assembly Guide
 
 ## Introduction
-SPAdes (St. Petersburg genome assembler) is a versatile toolkit for genome assembly, particularly effective for bacterial genomes. This guide covers basic usage and common scenarios.
+In this guide, I'll walk you through using SPAdes (St. Petersburg genome assembler) for genome assembly. SPAdes is a fantastic toolkit, especially for assembling bacterial genomes.  
 
 ## Installation
 

@@ -1,7 +1,7 @@
 # QUAST: Quality Assessment Tool for Genome Assemblies
 
 ## Introduction
-QUAST (QUality ASsessment Tool) is an evaluator for genome assemblies that provides comprehensive quality metrics. This guide covers essential usage and common scenarios for assessing assembly quality.
+QUAST (QUality ASsessment Tool) is an excellent tool for evaluating genome assemblies. It provides comprehensive quality metrics that are crucial for assessing the quality of your assemblies. 
 
 ## Installation
 
