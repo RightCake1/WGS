@@ -144,19 +144,10 @@ query_genome  reference_genome  ANI_value  fragments_mapped  total_fragments
 Alternative to FastANI with different algorithm
 
 ```bash
+# Installation
+pip install orthoani
 # Run OrthoANI
-java -jar OAT_cmd.jar -u query.fasta reference.fasta
-```
-
-### 2. pyANI
-Python implementation with multiple methods
-
-```bash
-# Install
-pip install pyani
-
-# Run analysis
-average_nucleotide_identity.py -i input_dir -o output_dir -m ANIb
+orthoani -q sequence1.fa -r sequence2.fa
 ```
 
 ## Best Practices
@@ -208,17 +199,18 @@ average_nucleotide_identity.py -i input_dir -o output_dir -m ANIb
 * [ANI Calculator](https://www.ezbiocloud.net/tools/ani)
 * [NCBI Genome](https://www.ncbi.nlm.nih.gov/genome)
 * [Type Strain Genome Server](https://tygs.dsmz.de)
+* [OrthoANI](https://github.com/althonos/orthoani)
 
 ## Tool Comparison
 
-| Feature         | FastANI | OrthoANI | pyANI  | Proksee |
-|----------------|---------|----------|---------|----------|
-| Speed          | Fast    | Moderate | Slow    | N/A      |
-| Accuracy       | High    | High     | High    | N/A      |
-| Visualization  | No      | Basic    | Basic   | Advanced |
-| Local Install  | Yes     | Yes      | Yes     | No       |
-| Memory Usage   | Low     | Moderate | High    | N/A      |
-| Batch Process  | Yes     | Limited  | Yes     | Limited  |
+| Feature        | FastANI | OrthoANI |  Proksee  |
+|----------------|---------|----------|-----------|
+| Speed          | Fast    | Moderate |  N/A      |
+| Accuracy       | High    | High     |  N/A      |
+| Visualization  | No      | Basic    |  Advanced |
+| Local Install  | Yes     | Yes      |  No       |
+| Memory Usage   | Low     | Moderate |  N/A      |
+| Batch Process  | Yes     | Limited  |  Limited  |
 
 ---
 

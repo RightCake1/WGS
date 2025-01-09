@@ -5,7 +5,7 @@ This guide covers tools and methods for identifying and extracting 16S rRNA sequ
 
 ## Command Line Tools
 
-### 1. Barrnap (Bacterial/Archaeal Ribosomal RNA Predictor)
+### Barrnap (Bacterial/Archaeal Ribosomal RNA Predictor)
 **Source**: [GitHub Repository](https://github.com/tseemann/barrnap)
 
 #### Installation
@@ -22,14 +22,12 @@ barrnap --version
 #### Basic Usage
 ```bash
 # Simple run
+barrnap -o rrna.fa < contigs.fa > rrna.gff
+# To see the 16s sequence
+head -n 3 rrna.fa
+
+# Get gff3
 barrnap contigs.fasta > output.gff3
-
-# Generate FASTA output
-barrnap -o rRNA.fasta contigs.fasta > output.gff3
-
-# Species-specific search
-barrnap --kingdom bac contigs.fasta > bacteria.gff3
-barrnap --kingdom arc contigs.fasta > archaea.gff3
 ```
 
 #### Advanced Options
@@ -61,27 +59,6 @@ GFF3 format contains:
 # Strand
 # Frame
 # Attributes
-```
-
-### 2. RNAmmer
-**Alternative command-line tool**
-
-#### Installation
-```bash
-# Via conda
-conda install -c bioconda rnammer
-
-# Verify installation
-rnammer -v
-```
-
-#### Usage
-```bash
-# Basic prediction
-rnammer -S bac -m lsu,ssu,tsu -gff output.gff -f output.fasta contigs.fasta
-
-# Specific 16S prediction
-rnammer -S bac -m ssu -gff 16S.gff -f 16S.fasta contigs.fasta
 ```
 
 ## Web-based Tools
@@ -125,25 +102,11 @@ rnammer -S bac -m ssu -gff 16S.gff -f 16S.fasta contigs.fasta
 
 ## Validation and Analysis
 
-### 1. BLAST Analysis
-```bash
-# Create BLAST database
-makeblastdb -in 16S_reference.fasta -dbtype nucl
 
-# Run BLAST
-blastn \
-    -query extracted_16S.fasta \
-    -db 16S_reference.fasta \
-    -outfmt 6 \
-    -perc_identity 95 \
-    -max_target_seqs 10 \
-    > blast_results.txt
-```
-
-### 2. Multiple Sequence Alignment
+### Multiple Sequence Alignment
 ```bash
 # Using MUSCLE
-muscle -in 16S_sequences.fasta -out aligned.fasta
+muscle -align 16S_sequences.fasta -out aligned.fasta
 
 # Using MAFFT
 mafft --auto 16S_sequences.fasta > aligned.fasta
