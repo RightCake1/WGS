@@ -26,18 +26,6 @@ CARD's primary tool for predicting resistome from genome sequences.
 # Web interface
 URL: https://card.mcmaster.ca/analyze/rgi
 
-# Command line installation
-conda install -c bioconda rgi
-
-# Basic usage
-rgi main -i input.fasta -o output_filename -t protein
-rgi main -i input.fasta -o output_filename -t contig
-
-# Additional options:
---clean # Remove temporary files
---debug # Enable debug mode
---include_loose # Include loose hits in results
-```
 
 ### ABRicate
 Mass screening of contigs for antimicrobial resistance genes.
@@ -62,29 +50,16 @@ abricate --minid 80 --mincov 60 input.fasta
 
 ## Advanced Tools
 
-### Kleborate
-Specialized tool for Klebsiella species typing and resistance detection.
-
-```bash
-# Installation
-conda install -c bioconda kleborate
-
-# Basic usage
-kleborate --all -o results.txt -a assemblies/*.fasta
-kleborate --resistance -o amr.txt -a assemblies/*.fasta
-```
-
 ### abriTAMR
 Pipeline for generating AMR reports from sequence data.
 
 ```bash
 # Installation via conda
-conda create -n abritamr
+conda create -n abritamr -c bioconda abritamr
 conda activate abritamr
-conda install -c bioconda abritamr
 
 # Basic usage
-abritamr run --fasta_dir /path/to/fasta/files --outdir results
+abritamr run --contigs genome.fasta --prefix klebsiella_amr --species Klebsiella_pneumoniae
 ```
 
 ## AMR Classification Guidelines

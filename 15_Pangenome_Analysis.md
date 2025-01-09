@@ -39,45 +39,27 @@ chmod +x roary_plots.py
 ```
 
 ## Running Roary
-
-### Basic Usage
 ```bash
-# Simple run
-roary *.gff
-
-# Standard run with common options
-roary \
-    -f roary_output \
-    -e \
-    -n \
-    -v \
-    -p 8 \
-    *.gff
-```
-
-### Advanced Options
-```bash
-# Comprehensive analysis
-roary \
-    -f roary_output \
-    -e \                  # Create gene alignment files
-    -n \                  # Fast core gene alignment
-    -v \                  # Verbose output
-    -p 8 \               # Use 8 threads
-    -i 90 \              # Minimum percentage identity for blastp
-    -cd 90 \             # Percentage of isolates for core definition
-    -g 100000 \          # Maximum clusters
-    -s \                 # Don't split paralogs
-    --mafft \            # Use MAFFT for alignment
-    *.gff
-
-# Memory-efficient run for large datasets
-roary \
-    -f roary_output \
-    -p 8 \
-    -m 8192 \           # Memory limit in MB
-    --parallel_all_the_things \
-    *.gff
+# Created an environment. 
+Code:
+conda activate pangenome
+# Annotated related strains and generated .gff files using Prokka. 
+Code:
+for file in *.fasta; do
+prokka --outdir output_"${file%.fasta}" "$file"
+done 
+# Ran Roary. 
+Code:
+Roary -f Roaryresults -p 6 -e -n -v --maft *.gff
+# Used FastTree. 
+Code:
+FastTree -nt -gtr Roaryresult/core_gene_alignment.aln > Roaryresult/mytree.newick
+# Generated images. 
+Code:
+python Roary_plots.py --labels Roaryresult/mytree.newick Roaryresult/gene_presence_absence.csv
+# Created an SVG file. 
+Code:
+python Roary_plots.py --labels --format svg Roaryresult/mytree.newick Roaryresult/gene_presence_absence.csv
 ```
 
 ### Parameter Explanations
@@ -110,23 +92,6 @@ FastTree \
     roary_output/core_gene_alignment.aln > roary_output/bootstrap_tree.newick
 ```
 
-## Visualization
-
-### Generate Basic Plots
-```bash
-# Create PNG plots
-python roary_plots.py \
-    --labels \
-    roary_output/tree.newick \
-    roary_output/gene_presence_absence.csv
-
-# Create SVG plots
-python roary_plots.py \
-    --labels \
-    --format svg \
-    roary_output/tree.newick \
-    roary_output/gene_presence_absence.csv
-```
 
 ### Advanced Visualization
 ```bash

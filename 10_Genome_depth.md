@@ -51,7 +51,7 @@ samtools depth -a contigs_sort.bam | \
 # Coverage breadth (percentage of reference covered)
 samtools depth -a contigs_sort.bam | awk '{c++;s+=$3}END{print s/c}'
 
-or 
+# or 
 
 samtools depth -a contigs_sort.bam | awk '{c++; if($3>0) total+=1}END{print (total/c)*100}'
 
@@ -62,35 +62,6 @@ samtools depth -a contigs_sort.bam | \
         print "≥20x coverage: " (d20/c)*100 "%"
         print "≥30x coverage: " (d30/c)*100 "%"
     }'
-```
-
-## Advanced Analysis
-
-### Quality Filtering
-
-```bash
-# Filter by mapping quality
-samtools view -q 30 -b sorted.bam > highqual.bam
-
-# Filter proper pairs only
-samtools view -f 2 -b sorted.bam > proper_paired.bam
-
-# Remove unmapped, secondary, and supplementary alignments
-samtools view -F 2308 -b sorted.bam > primary.bam
-```
-
-### Regional Analysis
-
-```bash
-# Get coverage for specific region
-samtools depth -r "chr1:1000-2000" sorted.bam
-
-# Extract reads from region
-samtools view sorted.bam "chr1:1000-2000" > region.sam
-
-# Calculate mean depth in region
-samtools depth -r "chr1:1000-2000" sorted.bam | \
-    awk '{c++;s+=$3}END{print s/c}'
 ```
 
 ## Best Practices
