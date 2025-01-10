@@ -3,11 +3,10 @@
 Welcome to the **Bacterial Whole Genome Analysis Guideline for Beginners**! This repository serves as a comprehensive starting point for researchers interested in bacterial genome analysis, focusing on tools and techniques for comparative genomics and metagenomics.
 
 ## 📚 Overview
-This guideline is tailored for researchers conducting secondary data analysis (*dry lab*) with a focus on bacterial isolates like **Klebsiella quasipneumoniae**. Whether you're new to bioinformatics or looking for structured workflows, this repository has you covered.
+This guideline is tailored for researchers conducting secondary data analysis (*dry lab*) with a focus on bacterial isolates. Whether you're new to bioinformatics or looking for structured workflows, this repository has you covered.
 
 ## 🎯 Features
 - **Comparative Genomics:** Step-by-step instructions for analyzing and comparing bacterial genomes.
-- **Metagenomics:** Guidelines for exploring bacterial communities in metagenomic datasets.
 - **Beginner-Friendly:** Simplified explanations and practical tips to get you started.
 
 ---
@@ -44,7 +43,7 @@ Before diving in, ensure you have the following:
 - **Basic Knowledge**: Familiarity with Linux and command-line tools.
 - **Software Requirements**:
   - Tools already referenced in this repository.
-  - Refer to the [Setup and Installation](#setup-and-installation) section for details.
+  - Refer to the [🛠️Setup and Installation](#setup-and-installation) section for details.
 
 ## 🛠️Setup and Installation
 To replicate the workflows described:
@@ -110,7 +109,6 @@ To replicate the workflows described:
 - Refer to [Phylogeny_Tree.md](Pangenome_Phylogenetics/Phylogeny_Tree.md).
 
 ## 💡Contributing
-Contributions are welcome! If you have suggestions or additional workflows, please open an issue or submit a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
-
+Contributions are welcome! If you have suggestions or additional workflows, please open an issue or submit a pull request.
 ## 📩 Contact
 For queries or collaboration, please contact [galeeb115@gmail.com].
