@@ -33,7 +33,6 @@ This guideline is tailored for researchers conducting secondary data analysis (*
     - [Pangenome Analysis](#pangenome-analysis)
     - [Phylogenetic Tree Construction](#phylogenetic-tree-construction)
 5. [Contributing](#contributing)
-6. [License](#license)
 
 ---
 
