@@ -13,10 +13,10 @@ This guideline is tailored for researchers conducting secondary data analysis (*
 ---
 
 ## 📖 Table of Contents
-1. [Getting Started](#getting-started)
-2. [Prerequisites](#prerequisites)
-3. [Setup and Installation](#setup-and-installation)
-4. [Workflow](#workflow)
+1. [🏃Getting Started](#getting-started)
+2. [📜Prerequisites](#prerequisites)
+3. [🛠️Setup and Installation](#setup-and-installation)
+4. [⚙️Workflow](#workflow)
     - [FASTQ Processing](#fastq-processing)
     - [Genome Assembly](#genome-assembly)
     - [Quality Assessment](#quality-assessment)
@@ -32,21 +32,21 @@ This guideline is tailored for researchers conducting secondary data analysis (*
     - [Virulence Factors](#virulence-factors)
     - [Pangenome Analysis](#pangenome-analysis)
     - [Phylogenetic Tree Construction](#phylogenetic-tree-construction)
-5. [Contributing](#contributing)
+5. [💡Contributing](#contributing)
 
 ---
 
-## 🏃 Getting Started
+## 🏃Getting Started
 This repository is designed for researchers with minimal experience in bacterial genome analysis. Follow the step-by-step instructions in the `.md` files to perform tasks like genome assembly, annotation, and visualization.
 
-## 📜 Prerequisites
+## 📜Prerequisites
 Before diving in, ensure you have the following:
 - **Basic Knowledge**: Familiarity with Linux and command-line tools.
 - **Software Requirements**:
   - Tools already referenced in this repository.
   - Refer to the [Setup and Installation](#setup-and-installation) section for details.
 
-## 🛠️ Setup and Installation
+## 🛠️Setup and Installation
 To replicate the workflows described:
 1. Clone this repository:
    ```bash
@@ -62,7 +62,7 @@ To replicate the workflows described:
    ```
 4. Can install manually as well; all the installation process are in the .md files
 
-## ⚙️ Workflow
+## ⚙️Workflow
 
 ### FASTQ Processing
 - Refer to [FASTQ_processing.md](FASTQ_to_FASTA/FASTQ_processing.md).
@@ -109,7 +109,7 @@ To replicate the workflows described:
 ### Phylogenetic Tree Construction
 - Refer to [Phylogeny_Tree.md](Pangenome_Phylogenetics/Phylogeny_Tree.md).
 
-## 💡 Contributing
+## 💡Contributing
 Contributions are welcome! If you have suggestions or additional workflows, please open an issue or submit a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## 📩 Contact
