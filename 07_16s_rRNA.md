@@ -156,15 +156,13 @@ mafft --auto 16S_sequences.fasta > aligned.fasta
 
 ## Tool Comparison
 
-| Feature           | Barrnap | RNAmmer | ContEST16S | RNAcentral |
-|------------------|----------|----------|------------|------------|
-| Speed            | Fast     | Moderate | Fast       | Variable   |
-| Accuracy         | High     | High     | High       | High       |
-| Ease of Use      | Command  | Command  | Web        | Web        |
-| Output Format    | GFF3     | GFF      | FASTA      | Multiple   |
-| Local Install    | Yes      | Yes      | No         | No         |
-| Free/Open Source | Yes      | Yes      | Limited    | Yes        |
-
+| Feature          | Barrnap  | ContEST16S | 
+|------------------|----------|------------|
+| Speed            | Fast     | Fast       | 
+| Accuracy         | High     | High       | 
+| Ease of Use      | Command  | Web        | 
+| Output Format    | GFF3     | FASTA      | 
+| Free/Open Source | Yes      | Limited    | 
 ---
 
 **Note**: Regular updates of databases and tools are essential for accurate identification and analysis.

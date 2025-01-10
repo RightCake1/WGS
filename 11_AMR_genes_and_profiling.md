@@ -25,9 +25,9 @@ CARD's primary tool for predicting resistome from genome sequences.
 ```bash
 # Web interface
 URL: https://card.mcmaster.ca/analyze/rgi
+```
 
-
-### ABRicate
+## ABRicate
 Mass screening of contigs for antimicrobial resistance genes.
 
 ```bash
