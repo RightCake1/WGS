@@ -21,6 +21,8 @@ As I continue to explore new tools and methodologies, I regularly update this re
 ## 📺 Additional Resources
 Sometimes, text instructions aren't enough. I recommend supplementing this guide with YouTube tutorials for visual learning. The bioinformatics community has created excellent video content that can help reinforce the concepts covered here.
 
+You can follow [this](https://github.com/vappiah/bacterial-genomics-tutorial) for a more seamless pipeline !
+
 ## 💡 Contributing
 Your feedback is invaluable! If you spot areas for improvement or have suggestions:
 - Open an issue to report problems or suggest enhancements

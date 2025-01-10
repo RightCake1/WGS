@@ -47,10 +47,7 @@ platon --db db --output PlatonResults Your_file.fasta
 1. **Using Conda (Recommended)**
 ```bash
 # Create and activate new environment
-conda config --add channels defaults
-conda config --add channels conda-forge
-conda config --add channels bioconda
-conda install -c bioconda mob_suite
+pip3 install mob_suite
 
 2. **Using pip**
 ```bash
@@ -90,18 +87,6 @@ mob_recon \
     --keep_tmp \   # Keep temporary files
     -n 8          # Use 8 threads
 ```
-
-## Troubleshooting
-
-### Docker Issues
-1. Permission denied errors:
-   - Follow the [Docker permission fix guide](https://phoenixnap.com/kb/docker-permission-denied#ftoc-heading-4)
-   - Use Method 3 for most reliable results
-
-### Common Problems
-- Docker login failures
-- Conda environment conflicts
-- File permission issues
 
 ## Additional Resources
 - [Platon GitHub](https://github.com/oschwengers/platon)
