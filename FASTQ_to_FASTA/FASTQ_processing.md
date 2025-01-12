@@ -1,7 +1,8 @@
 # FASTQ to FASTA Processing Guide
 
 ## Introduction
-This guide is all about handling FASTQ sequence files, performing quality control, and getting them ready for downstream analysis. I've put together this step-by-step workflow to help manage files, assess quality, and trim sequences effectively.
+
+This guide is all about handling FASTQ sequence files, performing quality control, and getting them ready for downstream analysis. This step-by-step workflow helps manage files, assess quality, and trim sequences effectively.
 
 ## Prerequisites
 
@@ -65,7 +66,7 @@ cat sample1_L001_R2.fastq \
     sample1_L004_R2.fastq > R2.fastq
 
 # Verify file sizes
-ls -lh merged_*.fastq
+ls -lh R*.fastq
 ```
 
 ### 5. Initial Quality Control with FastQC
@@ -89,6 +90,7 @@ fastqc *.fastq
 #### Interpreting FastQC Reports
 
 Key metrics to examine:
+
 * Per base sequence quality
 * Per sequence quality scores
 * Per base sequence content
@@ -100,7 +102,6 @@ Key metrics to examine:
 
 ```bash
 # Basic paired-end trimming
-# Can exclude R1U and R2U since we wont be needing them as they are unpaired reads
 trimmomatic PE \
     -phred33 \
     R1.fastq R2.fastq \
@@ -110,6 +111,8 @@ trimmomatic PE \
     LEADING:20 \
     TRAILING:20 \
     MINLEN:36
+
+# Can exclude R1U and R2U since they are unpaired reads and not needed for downstream analysis
 ```
 
 #### Trimmomatic Parameters Explained
@@ -193,4 +196,4 @@ multiqc .
 
 ---
 
-**Note**: Parameters should be adjusted based on your specific dataset and research goals. Always verify output quality after each step.
+> **Note**: Parameters should be adjusted based on your specific dataset and research goals. Always verify output quality after each step.
