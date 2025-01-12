@@ -13,19 +13,15 @@ This guideline is tailored for researchers conducting secondary data analysis (*
 
 ## 📖 Table of Contents
 1. [🏃Getting Started](#getting-started)
-2. [💻Linux Basic Commands](#linux-basic-commands)
-3. [📜Prerequisites](#prerequisites)
-4. [🛠️Setup and Installation](#setup-and-installation)
-5. [⚙️Workflow](#workflow)
-6. [💡Contributing](#contributing)
+2. [📜Prerequisites](#prerequisites)
+3. [🛠️Setup and Installation](#setup-and-installation)
+4. [⚙️Workflow](#workflow)
+5. [💡Contributing](#contributing)
 
 ---
 
 ## 🏃Getting Started
 This repository is designed for researchers with minimal experience in bacterial genome analysis. Follow the step-by-step instructions in the `.md` files to perform tasks like genome assembly, annotation, and visualization.
-
-## 💻Linux Basic Commands
-For newcomers or those unfamiliar with Linux, we have provided a comprehensive list of essential Linux commands to help you get started. You can find this list in the [Linux_Commands.md](Getting_started/Linux_Commands.md) file.
 
 ## 📜Prerequisites
 Before diving in, ensure you have the following:
