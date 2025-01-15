@@ -75,9 +75,9 @@ To replicate the workflows described:
 
 ### [Virulence_factors.md](AMR_Virulence/Virulence_factors.md).
 
-### [Pangenome_Analysis.md](Pangenome_Phylogenetics/Pangenome_Analysis.md).
+### [Phylogeny_Tree_and_Pangenome_Analysis_by_ROARY.md](Pangenome_Phylogenetics/Phylogeny_Tree_and_Pangenome_Analysis_by_ROARY.md).
 
-### [Phylogeny_Tree.md](Pangenome_Phylogenetics/Phylogeny_Tree.md).
+### [Phylogeny_Tree.md](Pangenome_Phylogenetics/Phylogeny_Tree_by_MEGA11.md) , (Phylogeny_Tree_by_KBase.md)
 
 ## 💡Contributing
 Contributions are welcome! If you have suggestions or additional workflows, please open an issue or submit a pull request.
