@@ -49,35 +49,21 @@ To replicate the workflows described:
 
 ## ⚙️Workflow
 
-## [FASTQ_processing.md](FASTQ_to_FASTA/FASTQ_processing.md)
-
-## [Genome_Assembly.md](FASTQ_to_FASTA/0Genome_Assembly.md).
-
-## [Quality_Assessment.md](FASTQ_to_FASTA/Quality_Assessment.md).
-
-## [SeqKit.md](FASTQ_to_FASTA/SeqKit.md).
-
-## [Genome_Annotaions.md](Annotations/Genome_Annotaions.md).
-
-## [Organism_Identification.md](Identification/Organism_Identification.md).
-
-## [Barrnap_16s_rRNA.md](Identification/Barrnap_16s_rRNA.md).
-
-## [ANI_verification.md](Identification/ANI_verification.md).
-
-## [Genome_depth.md](Annotations/Genome_depth.md).
-
-## [AMR_genes_and_profiling.md](AMR_Virulence/AMR_genes_and_profiling.md).
-
-## [Plasmid_Finderr.md](Mobile_genetic_elements/Plasmid_Finderr.md).
-
-## [MGE.md](Mobile_genetic_elements/MGE.md).
-
-## [Virulence_factors.md](AMR_Virulence/Virulence_factors.md).
-
-## [Phylogeny_Tree_and_Pangenome_Analysis_by_ROARY.md](Pangenome_Phylogenetics/Phylogeny_Tree_and_Pangenome_Analysis_by_ROARY.md).
-
-## [Phylogeny_Tree.md](Pangenome_Phylogenetics/Phylogeny_Tree_by_MEGA11.md) , [Phylogeny_Tree.md](Phylogeny_Tree_by_KBase.md)
+- [FASTQ_processing.md](FASTQ_to_FASTA/FASTQ_processing.md)
+- [Genome_Assembly.md](FASTQ_to_FASTA/0Genome_Assembly.md).
+- [Quality_Assessment.md](FASTQ_to_FASTA/Quality_Assessment.md).
+- [SeqKit.md](FASTQ_to_FASTA/SeqKit.md).
+- [Genome_Annotaions.md](Annotations/Genome_Annotaions.md).
+- [Organism_Identification.md](Identification/Organism_Identification.md).
+- [Barrnap_16s_rRNA.md](Identification/Barrnap_16s_rRNA.md).
+- [ANI_verification.md](Identification/ANI_verification.md).
+- [Genome_depth.md](Annotations/Genome_depth.md).
+- [AMR_genes_and_profiling.md](AMR_Virulence/AMR_genes_and_profiling.md).
+- [Plasmid_Finderr.md](Mobile_genetic_elements/Plasmid_Finderr.md).
+- [MGE.md](Mobile_genetic_elements/MGE.md).
+- [Virulence_factors.md](AMR_Virulence/Virulence_factors.md).
+- [Phylogeny_Tree_and_Pangenome_Analysis_by_ROARY.md](Pangenome_Phylogenetics/Phylogeny_Tree_and_Pangenome_Analysis_by_ROARY.md).
+- [Phylogeny_Tree.md](Pangenome_Phylogenetics/Phylogeny_Tree_by_MEGA11.md) or [Phylogeny_Tree.md](Phylogeny_Tree_by_KBase.md)
 
 ## 💡Contributing
 Contributions are welcome! If you have suggestions or additional workflows, please open an issue or submit a pull request.
