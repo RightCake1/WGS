@@ -31,7 +31,7 @@ A comprehensive guide for constructing and analyzing phylogenetic trees using 16
 ## Detailed Steps
 
 ### 1. Generate 16S RNA Sequence
-- Use Barrnap to generate the 16S RNA sequence from your genome
+- Use Barrnap to generate the 16S RNA sequence from your genomes
 - Verify sequence quality and length
 
 ### 2. BLAST Analysis

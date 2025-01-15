@@ -40,21 +40,21 @@ chmod +x roary_plots.py
 
 ## Running Roary
 ```bash
-# Created an environment. 
+# Create an environment. 
 Code:
 conda activate pangenome
-# Annotated related strains and generated .gff files using Prokka. 
+# Annotate related strains and generated .gff files using Prokka. 
 Code:
 for file in *.fasta; do
 prokka --outdir output_"${file%.fasta}" "$file"
 done 
-# Ran Roary. 
+# Run Roary. 
 Code:
 Roary -f Roaryresults -p 6 -e -n -v --maft *.gff
-# Used FastTree. 
+# Use FastTree. 
 Code:
 FastTree -nt -gtr Roaryresult/core_gene_alignment.aln > Roaryresult/mytree.newick
-# Generated images. 
+# Generate images. 
 Code:
 python Roary_plots.py --labels Roaryresult/mytree.newick Roaryresult/gene_presence_absence.csv
 # Created an SVG file. 
