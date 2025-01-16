@@ -1,168 +1,91 @@
-# 16S rRNA Sequence Identification and Analysis Guide
+# Antimicrobial Resistance (AMR) Analysis Tools Guide
 
 ## Introduction
-This guide covers tools and methods for identifying and extracting 16S rRNA sequences from genome assemblies. These sequences are crucial for phylogenetic analysis and taxonomic classification of bacterial species.
+This guide covers essential tools for antimicrobial resistance analysis in bacterial genomes. Each tool offers unique features for detecting and analyzing resistance genes and mutations.
 
-## Command Line Tools
+## Commonly Used Tools
 
-### Barrnap (Bacterial/Archaeal Ribosomal RNA Predictor)
-**Source**: [GitHub Repository](https://github.com/tseemann/barrnap)
+### ResFinder
+Web-based tool for identifying acquired antimicrobial resistance genes.
 
-#### Installation
 ```bash
-# Via conda (recommended)
-conda create -n rRNA_tools
-conda activate rRNA_tools
-conda install -c bioconda barrnap
+# Web-based tool - No command line required
+URL: https://cge.cbs.dtu.dk/services/ResFinder/
 
-# Verify installation
-barrnap --version
+# Key Features:
+- Identifies acquired antimicrobial resistance genes
+- Detects chromosomal mutations
+- Supports both assembled genomes and raw reads
+- Provides detailed resistance gene annotations
 ```
 
-#### Basic Usage
+### RGI (Resistance Gene Identifier)
+CARD's primary tool for predicting resistome from genome sequences.
+
 ```bash
-# Simple run
-barrnap -o rrna.fa < contigs.fa > rrna.gff
-# To see the 16s sequence
-head -n 3 rrna.fa
-
-# Get gff3
-barrnap contigs.fasta > output.gff3
+# Web interface
+URL: https://card.mcmaster.ca/analyze/rgi
 ```
 
-#### Advanced Options
+## ABRicate
+Mass screening of contigs for antimicrobial resistance genes.
+
 ```bash
-# Adjust search parameters
-barrnap \
-    --threads 4 \
-    --kingdom bac \
-    --lencutoff 0.8 \
-    --reject 0.25 \
-    --evalue 1e-6 \
-    contigs.fasta > detailed_output.gff3
+# Installation
+conda install -c bioconda abricate
 
-# Extract specific rRNA types
-barrnap contigs.fasta | \
-    awk '$3 == "16S_rRNA"' > 16S_locations.gff3
+# Basic usage
+abricate your_file.fasta                  # Single file analysis
+abricate *.fasta                          # Multiple files analysis
+abricate --summary *.fasta > summary.tab  # Create summary table
+
+# Database options
+abricate --list                           # List available databases
+abricate --db card --file input.fasta     # Use CARD database
+abricate --db resfinder input.fasta       # Use ResFinder database
+
+# Minimum coverage threshold
+abricate --minid 80 --mincov 60 input.fasta
 ```
 
-#### Output Format
-GFF3 format contains:
-```plaintext
-##gff-version 3
-# Sequence Name
-# Source (barrnap)
-# Feature Type (rRNA)
-# Start Position
-# End Position
-# Score
-# Strand
-# Frame
-# Attributes
-```
+## Advanced Tools
 
-## Web-based Tools
+### abriTAMR
+Pipeline for generating AMR reports from sequence data.
 
-### 1. ContEST16S
-**Website**: [EzBioCloud ContEST16S](https://www.ezbiocloud.net/tools/contest16s)
-
-#### Features
-* Web-based interface
-* Multiple genome support
-* Quality assessment
-* Taxonomic classification
-
-#### Usage Steps
-1. Register/Login to EzBioCloud
-2. Navigate to ContEST16S tool
-3. Upload genome assembly (FASTA)
-4. Submit for analysis
-5. Download results
-
-#### Output Files
-* 16S rRNA sequences (FASTA)
-* Quality metrics
-* Taxonomic assignments
-* Alignment statistics
-
-### 2. RNAcentral
-**Website**: [RNAcentral](https://rnacentral.org/)
-
-#### Features
-* Comprehensive RNA database
-* Multiple search options
-* Sequence alignments
-* Secondary structure prediction
-
-#### Usage Steps
-1. Upload sequence or accession
-2. Select search parameters
-3. Review results
-4. Download sequences
-
-## Validation and Analysis
-
-
-### Multiple Sequence Alignment
 ```bash
-# Using MUSCLE
-muscle -align 16S_sequences.fasta -out aligned.fasta
+# Installation via conda
+conda create -n abritamr -c bioconda abritamr
+conda activate abritamr
 
-# Using MAFFT
-mafft --auto 16S_sequences.fasta > aligned.fasta
+# Basic usage
+abritamr run --contigs genome.fasta --prefix klebsiella_amr --species Klebsiella_pneumoniae
 ```
 
-## Quality Control
+## AMR Classification Guidelines
 
-### Sequence Validation
-* Check sequence length (typical 16S ~1500bp)
-* Verify sequence completeness
-* Assess sequence quality
-* Compare with reference databases
+### MDR, XDR, PDR Criteria
+Reference: [Clinical Microbiology and Infection Journal](https://www.clinicalmicrobiologyandinfection.com/article/S1198-743X(14)61632-3/fulltext)
 
-### Common Issues
-* Fragmented sequences
-* Chimeric sequences
-* Misidentified regions
-* Poor quality assemblies
+Key definitions:
+- MDR (Multidrug-Resistant): Non-susceptible to ≥1 agent in ≥3 antimicrobial categories
+- XDR (Extensively Drug-Resistant): Non-susceptible to ≥1 agent in all but ≤2 categories
+- PDR (Pandrug-Resistant): Non-susceptible to all antimicrobial agents listed
 
 ## Best Practices
 
-### Data Preparation
-* Use high-quality genome assemblies
-* Verify assembly completeness
-* Check for contamination
-* Use appropriate kingdom settings
-
-### Analysis Workflow
-1. Run multiple prediction tools
-2. Compare and validate results
-3. Perform quality checks
-4. Conduct phylogenetic analysis
-5. Document findings
-
-### Tips for Success
-* Use multiple tools for verification
-* Validate predictions with BLAST
-* Check sequence quality metrics
-* Consider evolutionary context
+1. Always use the latest database versions for accurate results
+2. Cross-validate results using multiple tools
+3. Consider minimum coverage and identity thresholds
+4. Keep detailed records of database versions and parameters used
+5. Validate critical findings with phenotypic testing
 
 ## Additional Resources
 
-* [SILVA rRNA Database](https://www.arb-silva.de/)
-* [Greengenes Database](http://greengenes.secondgenome.com/)
-* [RDP Database](http://rdp.cme.msu.edu/)
-* [EzBioCloud Database](https://www.ezbiocloud.net/)
+- [CARD Database](https://card.mcmaster.ca/)
+- [ResFinder Database](https://cge.cbs.dtu.dk/services/ResFinder/)
+- [NCBI AMRFinder](https://www.ncbi.nlm.nih.gov/pathogens/antimicrobial-resistance/)
 
-## Tool Comparison
-
-| Feature          | Barrnap  | ContEST16S | 
-|------------------|----------|------------|
-| Speed            | Fast     | Fast       | 
-| Accuracy         | High     | High       | 
-| Ease of Use      | Command  | Web        | 
-| Output Format    | GFF3     | FASTA      | 
-| Free/Open Source | Yes      | Limited    | 
 ---
+**Note**: This guide covers basic usage. For detailed parameters and advanced features, refer to each tool's documentation.
 
-**Note**: Regular updates of databases and tools are essential for accurate identification and analysis.

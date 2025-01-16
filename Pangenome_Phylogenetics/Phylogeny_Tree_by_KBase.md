@@ -1,5 +1,15 @@
 # Creating a Phylogeny Tree using KBase
 
+## Preparing Files
+
+1. Retrieve FASTA files from [IMG/M](https://img.jgi.doe.gov/). First, create an account. Go to the [Genome Search](https://img.jgi.doe.gov/cgi-bin/mer/main.cgi?section=GenomeSearch&page=searchForm) page, select **Advanced Search Builder**, and click **Add new builder line**. Choose **taxonomy**, then **NCBI SPECIES**, and type the organism name to get all genomes. To get completed or high-quality sequences, add another builder line, select **sequencing assembly annotation**, then **sequencing quality**, and pick **level 6** for the best quality. Click **EVALUATE QUERY** to check the number of available sequences, then click **SEARCH**.
+
+2. Wait for the results. You can customize the table by scrolling down and selecting options. Under **NCBI Metadata**, choose **NCBI Assembly Accession** and **NCBI GenBank ID**, then click **REDISPLAY**. The table will show GCA IDs linking to the sequence profile. Select all by clicking the checkbox at the top left of the table, then click **EXPORT** to get the table.
+
+3. To download sequences in bulk, select all and click **ADD TO GENOME CART**, then wait for the page to reload. Click **Upload & Export & Save**, then **Export Genomes**, ensuring all genomes are selected. You will be notified by email when the download is ready.
+
+## Using KBase
+
 1. Head over to [KBase](https://www.kbase.us/)
 2. Click **Get Started**
 3. Create an account and login
