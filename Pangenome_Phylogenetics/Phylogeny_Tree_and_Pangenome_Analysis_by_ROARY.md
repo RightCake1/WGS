@@ -53,7 +53,7 @@ Code:
 Roary -f Roaryresults -p 6 -e -n -v --maft *.gff
 # Use FastTree. 
 Code:
-FastTree -nt -gtr Roaryresult/core_gene_alignment.aln > Roaryresult/mytree.newick
+FastTree -nt -gtr -gamma -boot 100 -spr 4 Roaryresult/core_gene_alignment.aln > Roaryresult/mytree.newick
 # Generate images. 
 Code:
 python Roary_plots.py --labels Roaryresult/mytree.newick Roaryresult/gene_presence_absence.csv
